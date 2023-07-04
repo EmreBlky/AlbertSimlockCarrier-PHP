@@ -18,4 +18,4 @@ For Devices upper then iPhone Xs which has imei2 it needs like this
 Telegram: @MeUnlocks
 
 Join To Our Group For Future Releases: 
-https://t.me/MMUnlocksgit
+https://t.me/MMUnlockgit
