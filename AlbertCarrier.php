@@ -48,48 +48,11 @@ Next Tether Policy: 10<br>SimLock:<span style='color:green;'> $gsmcall</span>";
 			}else {
         echo 'Wrong IMEI or Server Down!';
 	}
-			//echo $gsmcall;
 		}
     } else {
         echo 'Wrong IMEI';
 	}
 }
-    
-function checkInfo($imei) {
-	$url="https://m.att.com/shopmobile/wireless/byop/checkIMEI.xhr.html ";
-	$post_data = "_dynSessConf=23&%2Fatt%2Fecom%2Fshop%2Fview%2FValidateImeiFormHandler.imeiNumber=$imei&_D%3A%2Fatt%2Fecom%2Fshop%2Fview%2FValidateImeiFormHandler.imeiNumber=+&%2Fatt%2Fecom%2Fshop%2Fview%2FValidateImeiFormHandler.BYODSource=mobile&_D%3A%2Fatt%2Fecom%2Fshop%2Fview%2FValidateImeiFormHandler.BYODSource=+&%2Fatt%2Fecom%2Fshop%2Fview%2FValidateImeiFormHandler.sucessUrl=%2Fshopmobile%2Fwireless%2Fbyop%2FcheckIMEI%2Fjcr%3Acontent%2Fmaincontent%2Fimeiinfo.ajax.getImeiValidationResponse.xhr.html&_D%3A%2Fatt%2Fecom%2Fshop%2Fview%2FValidateImeiFormHandler.sucessUrl=+&%2Fatt%2Fecom%2Fshop%2Fview%2FValidateImeiFormHandler.validateImei=&_D%3A%2Fatt%2Fecom%2Fshop%2Fview%2FValidateImeiFormHandler.validateImei=+&_DARGS=%2Fshopmobile%2Fwireless%2Fbyop%2FcheckIMEI.xhr.html";
-	
-	$ch = curl_init(); 
-	curl_setopt($ch, CURLOPT_URL , $url ); 
-	curl_setopt($ch, CURLOPT_RETURNTRANSFER , 1); 
-	curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type: application/x-www-form-urlencoded", "Content-Length: ".strlen($post_data)));
-	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
-	curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
-	curl_setopt($ch, CURLOPT_USERAGENT , "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36 OPR/58.0.3135.127" );
-	curl_setopt($ch, CURLOPT_POST , 1); 
-	curl_setopt($ch, CURLOPT_POSTFIELDS , $post_data); 
-	
-	$xml_response = curl_exec($ch); 
-	if (curl_errno($ch)) { 
-		$error_message = curl_error($ch); 
-		$error_no = curl_errno($ch);
-
-	//	echo "error_message: " . $error_message . "<br>";
-	//	echo "error_no: " . $error_no . "<br>";
-	}
-	curl_close($ch);	
-	
-	if(strpos($xml_response, "deviceTitle") !== false) { 
-		$device= json_decode($xml_response);
-		$device=$device->deviceTitle;
-		$device=str_replace(" - ", " ", $device);
-		$device=str_replace("Apple ", "", $device);
-		return $device;
-	} else {
-		return "Unknown";
-	}
-}
-
 function IMSI_ARRAY() {
 
      return array('2321069', '2321170', '0839012', '3104101', '3102605', '2040400', '2343303', '2341590', '2400700', '2400111', '2400885', '2720303', '2940102', '4402011', '2163011', '2080111', '3027204','3114801');
@@ -105,6 +68,9 @@ else if($imsi=='7340400')
 else  
   return 'OTHER';
 }
+// Made with ❤️ by @MoUnlocks
+// This code is not for sale, free for the community
+// Contact Us for collaboration: Telegram @MoUnlocks
 
 function validate_imei($imei) {
 	if (!preg_match('/^[0-9]{15}$/', $imei)) return false;
@@ -139,6 +105,9 @@ function match_all($needles, $haystack) {
     }
     return true;
 }
+// Made with ❤️ by @MoUnlocks
+// This code is not for sale, free for the community
+// Contact Us for collaboration: Telegram @MoUnlocks
 
 function albert_attack($query) {
 	$url = "https://albert.apple.com/deviceservices/deviceActivation";
@@ -164,10 +133,12 @@ function albert_attack($query) {
 		$error_message = curl_error($ch); 
 		$error_no = curl_errno($ch);
 
-	//	echo "error_message: " . $error_message . "<br>";
-	//	echo "error_no: " . $error_no . "<br>";
 	}
 	curl_close($ch);
+// Made with ❤️ by @MoUnlocks
+// This code is not for sale, free for the community
+// Contact Us for collaboration: Telegram @MoUnlocks
+
 	
 	if(DEBUG){ print_r($xml_response)."</br>"; die(); }
 	
@@ -199,9 +170,11 @@ function albert_attack($query) {
 		return "TryMeid";
 	} else {
 		print_r($xml_response);
-		//return "IDK BRO";
 	}
 }
+// Made with ❤️ by @MoUnlocks
+// This code is not for sale, free for the community
+// Contact Us for collaboration: Telegram @MoUnlocks
 
 function simlock($imei, $sn, $meid, $imei2, $imsi = '6030326') {
 	if(isset($meid)) {
@@ -355,6 +328,9 @@ function simlock($imei, $sn, $meid, $imei2, $imsi = '6030326') {
 	</dict>
 </dict>
 </plist>';
+// Made with ❤️ by @MoUnlocks
+// This code is not for sale, free for the community
+// Contact Us for collaboration: Telegram @MoUnlocks
 
 	$ActivationInfoXML64 = base64_encode($ActivationInfoXML);
 	
@@ -409,3 +385,7 @@ TlVMTA==
 
 	return albert_attack($posti);
 }
+// Made with ❤️ by @MoUnlocks
+// This code is not for sale, free for the community
+// Contact Us for collaboration: Telegram @MoUnlocks
+?>
