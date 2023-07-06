@@ -1,21 +1,15 @@
-# Albert iTunes Bug 2023 Free Code Release 
-# ...........::::::Open Source::::::................
-Supported devices : iPhone/iPad
+# Albert iTunes Bug Code Release 🐞📱
 
-THIS IS APPLE SIMLOCK CHECKER FROM ALBERT ITUNES BUG // THANKS EVERYONE HOPE U ENJOY IT 
+#### Open Source 🔓
 
-==== instructions ====
+Supported devices: 📱 iPhone/iPad/!
 
-For Devices which has only imei and serial number like 
-iPhone 3gs till iPhone X u can use it like this example at my hosting 
+This is the Apple Simlock Checker from Albert iTunes Bug. Thank you to everyone for your support! We hope you enjoy it! 🚀
 
+If you have any questions or need assistance, feel free to reach out to us on Telegram: @MoUnlocks. We'd be happy to help!
 
-Here is an example at my host:
-For Devices upper then iPhone Xs which has imei2 it needs like this 
+Join our group for future releases and updates: 🔗 [MoUnlocks GitHub Group](https://t.me/MoUnlocksGITHUB)
 
+## License 📜
 
-
-Telegram: @MeUnlocks
-
-Join To Our Group For Future Releases: 
-https://t.me/MMUnlockgit
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT). Feel free to contribute and make improvements! 🙌
